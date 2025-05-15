@@ -1,0 +1,66 @@
+services:
+  matchmaker:
+    build: ./srcs/matchmaker
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/matchmaker/src:/app/src
+
+  game_server:
+    build: ./srcs/game_server
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/game_server/src:/app/src
+
+  player1:
+    build: ./srcs/player_bot
+    environment:
+      - PLAYER_NAME=Player1
+    depends_on:
+      - matchmaker
+      - game_server
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/player_bot/src:/app/src
+
+  player2:
+    build: ./srcs/player_bot
+    environment:
+      - PLAYER_NAME=Player2
+    depends_on:
+      - matchmaker
+      - game_server
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/player_bot/src:/app/src
+
+  player3:
+    build: ./srcs/player_bot
+    environment:
+      - PLAYER_NAME=Player3
+    depends_on:
+      - matchmaker
+      - game_server
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/player_bot/src:/app/src
+
+  player4:
+    build: ./srcs/player_bot
+    environment:
+      - PLAYER_NAME=Player4
+    depends_on:
+      - matchmaker
+      - game_server
+    networks:
+      - multiplayer_game_net
+    volumes:
+      - ./srcs/player_bot/src:/app/src
+
+networks:
+  multiplayer_game_net:
+    driver: bridge

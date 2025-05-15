@@ -1,0 +1,25 @@
+ game_server  Built
+ matchmaker  Built
+ player1  Built
+ player2  Built
+ player3  Built
+ player4  Built
+ Container multiplayer-game_server-1  Created
+ Container multiplayer-matchmaker-1  Created
+ Container multiplayer-player3-1  Created
+ Container multiplayer-player4-1  Created
+ Container multiplayer-player1-1  Created
+ Container multiplayer-player2-1  Created
+Gracefully stopping... (press Ctrl+C again to force)
+ Container multiplayer-player1-1  Stopping
+ Container multiplayer-player3-1  Stopping
+ Container multiplayer-player2-1  Stopping
+ Container multiplayer-player4-1  Stopping
+ Container multiplayer-player4-1  Stopped
+ Container multiplayer-player2-1  Stopped
+ Container multiplayer-player1-1  Stopped
+ Container multiplayer-player3-1  Stopped
+ Container multiplayer-game_server-1  Stopping
+ Container multiplayer-matchmaker-1  Stopping
+got 3 SIGTERM/SIGINTs, forcefully exiting
+make: *** [Makefile:2: up] Error 1
