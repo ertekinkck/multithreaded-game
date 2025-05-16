@@ -12,18 +12,23 @@ void	sem_wait(Semaphore* sem)
 {
 	// TODO: Implement the semaphore wait (P) operation. 
 	// Check if count is already at or below zero, block if needed
-	while (sem->count <= 0) {
-		thread_yield();
-	}
-	// Only decrement once
-	sem->count--;
+    preempt_disable(); // Preemption'ı devre dışı bırak
+    while (sem->count <= 0) {
+        preempt_enable();  // Diğer thread'lerin çalışmasına izin ver (post yapabilmeleri için)
+        thread_yield();    // CPU'yu bırak
+        preempt_disable(); // Koşulu tekrar atomik olarak kontrol etmek için preemption'ı kapat
+    }
+    sem->count--;      // Kaynak sayısını azalt
+    preempt_enable();  // Preemption'ı tekrar etkinleştir
 }
 
 void	sem_post(Semaphore* sem)
 {
 	// TODO: Implement the semaphore signal (V) operation.
-	sem->count++;
-	thread_schedule();
+	preempt_disable();
+    sem->count++;
+    preempt_enable();
+
 }
 
 void	sem_destroy(Semaphore* sem)

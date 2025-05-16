@@ -1,0 +1,339 @@
+docker compose up --build
+Compose can now delegate builds to bake for better performance.
+ To do so, set COMPOSE_BAKE=true.
+#0 building with "default" instance using docker driver
+
+#1 [game_server internal] load build definition from Dockerfile
+#1 transferring dockerfile: 158B done
+#1 DONE 0.0s
+
+#2 [matchmaker internal] load build definition from Dockerfile
+#2 transferring dockerfile: 153B done
+#2 DONE 0.0s
+
+#3 [game_server internal] load metadata for docker.io/library/gcc:latest
+#3 DONE 5.8s
+
+#4 [game_server internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [matchmaker internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [matchmaker 1/2] FROM docker.io/library/gcc:latest@sha256:16aea78a24ad0c562e63fe3060d3ce85f96101ecd1db09b67b1ccd9bff7dfe4d
+#6 DONE 0.0s
+
+#7 [matchmaker 2/2] WORKDIR /app
+#7 CACHED
+
+#8 [game_server] exporting to image
+#8 exporting layers done
+#8 writing image sha256:25ca115ee64cef9bea4334a77d55be2386926583c84621a9a80263f0891458aa done
+#8 naming to docker.io/library/multiplayer-game_server done
+#8 DONE 0.0s
+
+#9 [matchmaker] exporting to image
+#9 exporting layers done
+#9 writing image sha256:9220014232f81600e35073167c5abe9b6aae2c9d5d79777a7d5f76a2782f60a1 done
+#9 naming to docker.io/library/multiplayer-matchmaker done
+#9 DONE 0.0s
+
+#10 [game_server] resolving provenance for metadata file
+#10 DONE 0.0s
+
+#11 [matchmaker] resolving provenance for metadata file
+#11 DONE 0.0s
+
+#12 [player4 internal] load build definition from Dockerfile
+#12 transferring dockerfile: 131B done
+#12 DONE 0.0s
+
+#3 [player4 internal] load metadata for docker.io/library/gcc:latest
+#3 DONE 6.1s
+
+#13 [player4 internal] load .dockerignore
+#13 transferring context: 2B done
+#13 DONE 0.0s
+
+#6 [player4 1/2] FROM docker.io/library/gcc:latest@sha256:16aea78a24ad0c562e63fe3060d3ce85f96101ecd1db09b67b1ccd9bff7dfe4d
+#6 DONE 0.0s
+
+#7 [player4 2/2] WORKDIR /app
+#7 CACHED
+
+#14 [player4] exporting to image
+#14 exporting layers done
+#14 writing image sha256:ab0a41c0c27af22b2041910fa2cdd837aa87d01f11bac4b3006cae9cbfe8528c done
+#14 naming to docker.io/library/multiplayer-player4 done
+#14 DONE 0.0s
+
+#15 [player4] resolving provenance for metadata file
+#15 DONE 0.0s
+
+#16 [player3 internal] load build definition from Dockerfile
+#16 transferring dockerfile: 131B done
+#16 DONE 0.0s
+
+#3 [player3 internal] load metadata for docker.io/library/gcc:latest
+#3 DONE 6.3s
+
+#17 [player3 internal] load .dockerignore
+#17 transferring context: 2B done
+#17 DONE 0.0s
+
+#6 [player3 1/2] FROM docker.io/library/gcc:latest@sha256:16aea78a24ad0c562e63fe3060d3ce85f96101ecd1db09b67b1ccd9bff7dfe4d
+#6 DONE 0.0s
+
+#7 [player3 2/2] WORKDIR /app
+#7 CACHED
+
+#18 [player3] exporting to image
+#18 exporting layers done
+#18 writing image sha256:c022ccada3c97dc8a6332f19707593339a5fa4499b21a490b9d6aad2b74f5d5a done
+#18 naming to docker.io/library/multiplayer-player3 done
+#18 DONE 0.0s
+
+#19 [player3] resolving provenance for metadata file
+#19 DONE 0.0s
+
+#20 [player2 internal] load build definition from Dockerfile
+#20 transferring dockerfile: 131B done
+#20 DONE 0.0s
+
+#3 [player2 internal] load metadata for docker.io/library/gcc:latest
+#3 DONE 6.6s
+
+#21 [player2 internal] load .dockerignore
+#21 transferring context: 2B done
+#21 DONE 0.0s
+
+#6 [player2 1/2] FROM docker.io/library/gcc:latest@sha256:16aea78a24ad0c562e63fe3060d3ce85f96101ecd1db09b67b1ccd9bff7dfe4d
+#6 DONE 0.0s
+
+#7 [player2 2/2] WORKDIR /app
+#7 CACHED
+
+#22 [player2] exporting to image
+#22 exporting layers done
+#22 writing image sha256:4c9f870e1941c0c7de587a2bffbb86241fcb0fd58ad5d22c238e1e6f9f625c84 done
+#22 naming to docker.io/library/multiplayer-player2 done
+#22 DONE 0.0s
+
+#23 [player2] resolving provenance for metadata file
+#23 DONE 0.0s
+
+#24 [player1 internal] load build definition from Dockerfile
+#24 transferring dockerfile: 131B done
+#24 DONE 0.0s
+
+#3 [player1 internal] load metadata for docker.io/library/gcc:latest
+#3 DONE 6.9s
+
+#25 [player1 internal] load .dockerignore
+#25 transferring context: 2B done
+#25 DONE 0.0s
+
+#6 [player1 1/2] FROM docker.io/library/gcc:latest@sha256:16aea78a24ad0c562e63fe3060d3ce85f96101ecd1db09b67b1ccd9bff7dfe4d
+#6 DONE 0.0s
+
+#7 [player1 2/2] WORKDIR /app
+#7 CACHED
+
+#26 [player1] exporting to image
+#26 exporting layers done
+#26 writing image sha256:064e5d31c462e5a9a76e9866cff9f72e1f98542629b8e67a88a49239f56201b1 done
+#26 naming to docker.io/library/multiplayer-player1 done
+#26 DONE 0.0s
+
+#27 [player1] resolving provenance for metadata file
+#27 DONE 0.0s
+Attaching to game_server-1, matchmaker-1, player1-1, player2-1, player3-1, player4-1
+matchmaker-1   | Matchmaker listening on port 5000
+matchmaker-1   | Matchmaker: Waiting to accept player 1/4...
+player4-1      | Player name: Player4
+matchmaker-1   | Matchmaker: Accepted player 1 (socket 4)
+matchmaker-1   | Matchmaker: Assigning HIGH priority to thread for player index 0
+matchmaker-1   | Matchmaker: Waiting to accept player 2/4...
+game_server-1  | Game server listening on port 6000
+matchmaker-1   | Matchmaker: Player Player4 (index 0) registered. Total players: 1
+player3-1      | Player name: Player3
+matchmaker-1   | Matchmaker: Accepted player 2 (socket 5)
+matchmaker-1   | Matchmaker: Assigning LOW priority to thread for player index 1
+matchmaker-1   | Matchmaker: Waiting to accept player 3/4...
+matchmaker-1   | Matchmaker: Player Player3 (index 1) registered. Total players: 2
+player2-1      | Player name: Player2
+matchmaker-1   | Matchmaker: Accepted player 3 (socket 6)
+matchmaker-1   | Matchmaker: Assigning HIGH priority to thread for player index 2
+matchmaker-1   | Matchmaker: Waiting to accept player 4/4...
+matchmaker-1   | Matchmaker: Player Player2 (index 2) registered. Total players: 3
+player1-1      | Player name: Player1
+matchmaker-1   | Matchmaker: Accepted player 4 (socket 7)
+matchmaker-1   | Matchmaker: Assigning LOW priority to thread for player index 3
+matchmaker-1   | Matchmaker: All 4 player connection attempts processed. Waiting for matchmaking threads to complete...
+matchmaker-1   | Matchmaker: Player Player1 (index 3) registered. Total players: 4
+matchmaker-1   | Matchmaker: Match found and notified: Player4 vs Player3
+matchmaker-1   | Matchmaker: Match found and notified: Player2 vs Player1
+game_server-1  | Game server: First player connected (socket 4)
+game_server-1  | Game server: Second player connected (socket 5)
+game_server-1  | Game server: First player connected (socket 6)
+game_server-1  | Game server: Second player connected (socket 7)
+game_server-1  | Fight started between Player3 and Player1!
+game_server-1  | Player3 damaged Player1 by 29 (heavy attack)
+player3-1      | Player3: Player3: You damaged Player1
+player1-1      | Player1: Player1: You are hurt by Player3
+game_server-1  | Player1 health is 71
+player3-1      | 
+player1-1      | 
+player1-1      | Player1: Player1: You damaged Player3
+player1-1      | 
+player3-1      | Player3: Player3: You are hurt by Player1
+player3-1      | 
+game_server-1  | Player1 damaged Player3 by 18 
+game_server-1  | Player3 health is 82
+game_server-1  | Fight started between Player4 and Player2!
+game_server-1  | Player4 damaged Player2 by 29 (heavy attack)
+player2-1      | Player2: Player2: You are hurt by Player4
+player4-1      | Player4: Player4: You damaged Player2
+game_server-1  | Player2 health is 71
+player2-1      | 
+player4-1      | 
+player3-1      | Player3: Player3: You damaged Player1
+player3-1      | 
+game_server-1  | Player3 damaged Player1 by 18 
+player1-1      | Player1: Player1: You are hurt by Player3
+player1-1      | 
+game_server-1  | Player1 health is 53
+game_server-1  | Player2 damaged Player4 by 15 
+game_server-1  | Player4 health is 85
+player4-1      | Player4: Player4: You are hurt by Player2
+player2-1      | Player2: Player2: You damaged Player4
+player4-1      | 
+player2-1      | 
+player3-1      | Player3: Player3: You are hurt by Player1
+player3-1      | 
+player1-1      | Player1: Player1: You damaged Player3
+game_server-1  | Player1 damaged Player3 by 16 
+game_server-1  | Player3 health is 66
+player1-1      | 
+game_server-1  | Player4 damaged Player2 by 10 
+game_server-1  | Player2 health is 61
+player2-1      | Player2: Player2: You are hurt by Player4
+player4-1      | Player4: Player4: You damaged Player2
+player2-1      | 
+player4-1      | 
+game_server-1  | Player3 damaged Player1 by 15 
+game_server-1  | Player1 health is 38
+player3-1      | Player3: Player3: You damaged Player1
+player1-1      | Player1: Player1: You are hurt by Player3
+player1-1      | 
+player3-1      | 
+player4-1      | Player4: Player4: You are hurt by Player2
+game_server-1  | Player2 damaged Player4 by 12 
+player2-1      | Player2: Player2: You damaged Player4
+player4-1      | 
+game_server-1  | Player4 health is 73
+player2-1      | 
+player3-1      | Player3: Player3: You are hurt by Player1
+game_server-1  | Player1 damaged Player3 by 21 (heavy attack)
+player3-1      | 
+player1-1      | Player1: Player1: You damaged Player3
+game_server-1  | Player3 health is 45
+player1-1      | 
+player4-1      | Player4: Player4: You damaged Player2
+player4-1      | 
+game_server-1  | Player4 damaged Player2 by 7 
+player2-1      | Player2: Player2: You are hurt by Player4
+player2-1      | 
+game_server-1  | Player2 health is 54
+player3-1      | Player3: Player3: You damaged Player1
+player3-1      | 
+game_server-1  | Player3 damaged Player1 by 9 
+player1-1      | Player1: Player1: You are hurt by Player3
+player1-1      | 
+game_server-1  | Player1 health is 29
+game_server-1  | Player2 damaged Player4 by 28 (heavy attack)
+game_server-1  | Player4 health is 45
+player4-1      | Player4: Player4: You are hurt by Player2
+player2-1      | Player2: Player2: You damaged Player4
+player2-1      | 
+player4-1      | 
+player3-1      | Player3: Player3: You are hurt by Player1
+player1-1      | Player1: Player1: You damaged Player3
+game_server-1  | Player1 damaged Player3 by 20 
+player3-1      | 
+player1-1      | 
+game_server-1  | Player3 health is 25
+player2-1      | Player2: Player2: You are hurt by Player4
+player4-1      | Player4: Player4: You damaged Player2
+player2-1      | 
+game_server-1  | Player4 damaged Player2 by 24 (heavy attack)
+player4-1      | 
+game_server-1  | Player2 health is 30
+[Kmatchmaker-1 exited with code 0
+game_server-1  | Player3 damaged Player1 by 14 
+game_server-1  | Player1 health is 15
+player1-1      | Player1: Player1: You are hurt by Player3
+player3-1      | Player3: Player3: You damaged Player1
+player3-1      | 
+player1-1      | 
+player4-1      | Player4: Player4: You are hurt by Player2
+player4-1      | 
+player2-1      | Player2: Player2: You damaged Player4
+game_server-1  | Player2 damaged Player4 by 26 (heavy attack)
+game_server-1  | Player4 health is 19
+player2-1      | 
+player1-1      | Player1: Player1: You damaged Player3
+player1-1      | 
+game_server-1  | Player1 damaged Player3 by 10 
+player3-1      | Player3: Player3: You are hurt by Player1
+player3-1      | 
+game_server-1  | Player3 health is 15
+player4-1      | Player4: Player4: You damaged Player2
+player4-1      | 
+player2-1      | Player2: Player2: You are hurt by Player4
+game_server-1  | Player4 damaged Player2 by 15 
+game_server-1  | Player2 health is 15
+player2-1      | 
+game_server-1  | Player3 damaged Player1 by 7 
+player1-1      | Player1: Player1: You are hurt by Player3
+game_server-1  | Player1 health is 8
+player3-1      | Player3: Player3: You damaged Player1
+player1-1      | 
+player3-1      | 
+player2-1      | Player2: Player2: You damaged Player4
+game_server-1  | Player2 damaged Player4 by 17 
+player2-1      | 
+player4-1      | Player4: Player4: You are hurt by Player2
+player4-1      | 
+game_server-1  | Player4 health is 2
+game_server-1  | Player1 damaged Player3 by 24 (heavy attack)
+game_server-1  | Player3 health is 0
+player3-1      | Player3: Player3: You are hurt by Player1
+player1-1      | Player1: Player1: You damaged Player3
+player1-1      | 
+player3-1      | 
+player4-1      | Player4: Player4: You damaged Player2
+player4-1      | 
+game_server-1  | Player4 damaged Player2 by 6 
+player2-1      | Player2: Player2: You are hurt by Player4
+player2-1      | 
+game_server-1  | Player2 health is 9
+player3-1      | Player3: Player3: you are dead, killed by opponent
+player3-1      | 
+player1-1      | Player1: Player1: you defeated the player
+game_server-1  | Fight ended: Player1 defeated Player3
+player2-1      | Player2: Player2: You damaged Player4
+player4-1      | Player4: Player4: You are hurt by Player2
+player1-1      | 
+game_server-1  | Fight thread for Player3 vs Player1 completed and exiting.
+player2-1      | 
+player4-1      | 
+game_server-1  | Player2 damaged Player4 by 24 (heavy attack)
+game_server-1  | Player4 health is 0
+[Kplayer1-1 exited with code 0
+[Kplayer4-1 exited with code 0
+[Kplayer3-1 exited with code 0
+[Kplayer2-1 exited with code 0
+[Kgame_server-1 exited with code 0

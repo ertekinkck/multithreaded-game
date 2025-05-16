@@ -32,11 +32,18 @@ void	*queue_dequeue(Queue *q)
 {
 	// TODO: Remove the front node from the queue,
 	// TODO: Return the data stored in the removed node.
-	QueueNode *temp = q->front;
-	void *data = temp->data;
-	q->front = q->front->next;
-	free(temp);
-	return (data);
+	if (queue_is_empty(q)) { // Kuyruk boşsa NULL dön
+        return (NULL);
+    }
+    QueueNode *temp = q->front;
+    void *data = temp->data;
+    q->front = q->front->next;
+    if (q->front == NULL) { // Eğer kuyruk bu eleman çıkarıldıktan sonra boşalırsa
+        q->rear = NULL;   // rear işaretçisini de NULL yap
+    }
+    free(temp);
+    return (data);
+
 }
 
 int	queue_is_empty(Queue *q)

@@ -1,0 +1,18 @@
+ game_server  Built
+ matchmaker  Built
+ player1  Built
+ player2  Built
+ player3  Built
+ player4  Built
+ Container multiplayer-matchmaker-1  Recreate
+ Container multiplayer-game_server-1  Recreate
+ Container multiplayer-matchmaker-1  Recreated
+ Container multiplayer-game_server-1  Recreated
+ Container multiplayer-player4-1  Recreate
+ Container multiplayer-player4-1  Recreated
+ Container multiplayer-player3-1  Recreate
+ Container multiplayer-player3-1  Recreated
+ Container multiplayer-player2-1  Recreate
+ Container multiplayer-player2-1  Recreated
+ Container multiplayer-player1-1  Recreate
+ Container multiplayer-player1-1  Recreated
